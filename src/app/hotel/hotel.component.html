@@ -1,0 +1,130 @@
+
+<div class="card">
+  <h5 class="card-header">Hotel</h5>
+  <div class="table-responsive text-nowrap">
+    <!-- Button trigger modal -->
+    <button type="button" style="margin-left: 10px" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Ajouter Hotel
+    </button>
+    <table class="table table-striped mt-3">
+      <thead>
+      <tr>
+        <th>libelle</th>
+        <th>code</th>
+        <th>Adresse</th>
+        <th>Categorie</th>
+        <th>NombreChambres</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody class="table-border-bottom-0" *ngFor="let hotel of ListHotel">
+      <tr>
+        <td>
+          <i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong> {{hotel.libelle}}</strong>
+        </td>
+        <td>{{hotel.code}}</td>
+        <td>{{hotel.adresse}}</td>
+        <td>{{hotel.categorie}}</td>
+        <td>{{hotel.nombreChambres}}</td>
+        <td>
+          <div class="dropdown">
+            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+              <i class="bx bx-dots-vertical-rounded"></i>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="javascript:void(0);"
+              ><i class="bx bx-edit-alt me-1"></i> Edit</a
+              >
+              <a class="dropdown-item" href="javascript:void(0);"
+              ><i class="bx bx-trash me-1"></i> Delete</a
+              >
+            </div>
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Nouveau Hotel</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+            <div class="card-body">
+              <form #f="ngForm" (ngSubmit)="AddHotel(f)">
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label" for="code">code</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="code" id="code" placeholder="code" />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label" for="libelle">libelle</label>
+                  <div class="col-sm-10">
+                    <div class="input-group input-group-merge">
+                      <input
+                        type="text"
+                        id="libelle"
+                        name="libelle"
+                        class="form-control"
+                        placeholder="libelle"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label" for="Adresse">Adresse</label>
+                  <div class="col-sm-10">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="adresse"
+                      name="adresse"
+                      placeholder="adresse"
+                    />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label" for="libelle">Categorie</label>
+                  <div class="col-sm-10">
+                    <div class="card-select">
+                      <select class="form-select col-5 " aria-label="Default select example" (change)="changeCategorie($event)"  >
+                        <option selected hidden> sélectionner une categorie ...</option>
+                        <option  value="TroisEtoiles"><h1>3 étoiles</h1></option>
+                        <option  value="quatreEtoiles"><h1>4 étoiles</h1></option>
+                        <option  value="cinqEtoiles"><h1>5 étoile</h1></option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label" for="NombreChambres">Nombre des Chambres</label>
+                  <div class="col-sm-10">
+                    <input
+                      type="number"
+                      id="NombreChambres"
+                      name="nombreChambres"
+                      class="form-control "
+                      placeholder="NombreChambres"
+                    />
+                  </div>
+                </div>
+                <div class="row justify-content-end">
+                  <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Send</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
