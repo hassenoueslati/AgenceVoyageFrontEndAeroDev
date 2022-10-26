@@ -12,6 +12,11 @@ import { HotelEditComponent } from './hotel-edit/hotel-edit.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { HotelAddComponent } from './hotel-add/hotel-add.component';
+import { PartenaireAddComponent } from './partenaire-add/partenaire-add.component';
+import { Partenaire } from './models/partenaire';
+import { PartenaireComponent } from './partenaire/partenaire.component';
+import { PartenaireEditComponent } from './partenaire-edit/partenaire-edit.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,11 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     FooterComponent,
     LoginComponent,
     HotelComponent,
-    HotelEditComponent
+    HotelEditComponent,
+    HotelAddComponent,
+    PartenaireAddComponent,
+    PartenaireComponent,
+    PartenaireEditComponent
   ],
   imports: [
     BrowserModule,
