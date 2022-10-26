@@ -12,6 +12,7 @@ import { HotelEditComponent } from './hotel-edit/hotel-edit.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { HotelAddComponent } from './hotel-add/hotel-add.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     FooterComponent,
     LoginComponent,
     HotelComponent,
-    HotelEditComponent
+    HotelEditComponent,
+    HotelAddComponent
   ],
   imports: [
     BrowserModule,
