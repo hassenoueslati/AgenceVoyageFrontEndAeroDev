@@ -15,7 +15,6 @@ export class HotelComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllHotels()
-    console.log(this.ListHotel)
   }
 
   getAllHotels(){

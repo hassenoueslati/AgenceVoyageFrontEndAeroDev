@@ -13,6 +13,9 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { HotelAddComponent } from './hotel-add/hotel-add.component';
+import { AireportComponent } from './aireport/aireport.component';
+import { AireportAddComponent } from './aireport-add/aireport-add.component';
+import { AireportEditComponent } from './aireport-edit/aireport-edit.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,18 @@ import { HotelAddComponent } from './hotel-add/hotel-add.component';
     LoginComponent,
     HotelComponent,
     HotelEditComponent,
-    HotelAddComponent
+    HotelAddComponent,
+    AireportComponent,
+    AireportAddComponent,
+    AireportEditComponent,
+    PartenaireAddComponent,
+    PartenaireComponent,
+    PartenaireEditComponent,
+    VoitureeComponent,
+    VoitureeEditComponent,
+    VoitureeAddComponent,
+    OffreComponent,
+    OffreEditComponent,
   ],
   imports: [
     BrowserModule,
