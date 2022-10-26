@@ -6,6 +6,14 @@ import {HotelAddComponent} from "./hotel-add/hotel-add.component";
 import {AireportComponent} from "./aireport/aireport.component";
 import {AireportEditComponent} from "./aireport-edit/aireport-edit.component";
 import {AireportAddComponent} from "./aireport-add/aireport-add.component";
+import {PartenaireComponent} from "./partenaire/partenaire.component";
+import {PartenaireEditComponent} from "./partenaire-edit/partenaire-edit.component";
+import {PartenaireAddComponent} from "./partenaire-add/partenaire-add.component";
+import {VoitureeComponent} from "./voiture/voituree.component";
+import {VoitureeEditComponent} from "./voituree-edit/voituree-edit.component";
+import {VoitureeAddComponent} from "./voituree-add/voituree-add.component";
+import {OffreComponent} from "./offre/offre.component";
+import {OffreEditComponent} from "./offre-edit/offre-edit.component";
 
 const routes: Routes = [
   { path: 'hotel',component: HotelComponent},
