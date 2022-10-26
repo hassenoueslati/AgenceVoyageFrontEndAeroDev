@@ -33,7 +33,7 @@
                   class="card-header d-flex align-items-center justify-content-between"
                 ></div>
                 <div class="card-body">
-                  <form>
+                  <form #f="ngForm" (ngSubmit)="AddOffre(f)">
                     <div class="row mb-3">
                       <label
                         class="col-sm-2 col-form-label"
@@ -42,6 +42,8 @@
                       >
                       <div class="col-sm-10">
                         <input
+                          name="libelle"
+                          ngModel
                           type="text"
                           class="form-control"
                           id="basic-default-name"
@@ -57,6 +59,8 @@
                       >
                       <div class="col-sm-10">
                         <input
+                          name="code"
+                          ngModel
                           type="text"
                           class="form-control"
                           id="basic-default-company"
@@ -73,7 +77,9 @@
                       <div class="col-sm-10">
                         <div class="input-group input-group-merge">
                           <input
-                            type="text"
+                            name="dateCreation"
+                            ngModel
+                            type="date"
                             id="basic-default-email"
                             class="form-control"
                             placeholder="Date Création"
@@ -91,6 +97,8 @@
                       <div class="col-sm-10">
                         <input
                           type="text"
+                          name="prix"
+                          ngModel
                           id="basic-default-phone"
                           class="form-control phone-mask"
                           placeholder="Prix"
@@ -100,7 +108,12 @@
 
                     <div class="row justify-content-end">
                       <div class="col-sm-10">
-                        <button type="submit" class="btn btn-primary">
+                        <button
+                          type="submit"
+                          class="btn btn-primary"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        >
                           Save
                         </button>
                       </div>
@@ -145,13 +158,22 @@
             <strong>{{ offre.prix }}</strong>
           </td>
           <td>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="javascript:void(0);"
-                ><i class="bx bx-edit-alt me-1"></i> Edit</a
+            <div class="dropdown">
+              <button
+                type="button"
+                class="btn p-0 dropdown-toggle hide-arrow"
+                data-bs-toggle="dropdown"
               >
-              <a class="dropdown-item" href="javascript:void(0);"
-                ><i class="bx bx-trash me-1"></i> Delete</a
-              >
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" (click)="UpdateOffre(offre)"
+                  ><i class="bx bx-edit-alt me-1"></i> Edit</a
+                >
+                <a class="dropdown-item" (click)="DeleteOffre(offre.idOffre)"
+                  ><i class="bx bx-trash me-1"></i> Delete</a
+                >
+              </div>
             </div>
           </td>
         </tr>

@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { OffreComponent } from './offre/offre.component';
 import { OffreEditComponent } from './offre-edit/offre-edit.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,14 +20,10 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     LoginComponent,
     OffreComponent,
-    OffreEditComponent
+    OffreEditComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

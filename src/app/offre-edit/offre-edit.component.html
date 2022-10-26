@@ -5,80 +5,92 @@
         <h5 class="mb-0">Basic Layout</h5>
       </div>
       <div class="card-body">
-        <form>
-            <div class="row mb-3">
-              <label
-                class="col-sm-2 col-form-label"
-                for="basic-default-name"
-                >Libelle</label
-              >
-              <div class="col-sm-10">
-                <input
-                  type="text"
+        <form #f="ngForm" (ngSubmit)=" UpdateOffre(f)">
+          <div class="row mb-3">
+            <label
+              class="col-sm-2 col-form-label"
+              for="basic-default-name"
+              >Libelle</label
+            >
+            <div class="col-sm-10">
+              <input [(ngModel)]="offre.libelle"
+                name="libelle"
+                ngModel
+                type="text"
+                class="form-control"
+                id="basic-default-name"
+                placeholder="Libelle"
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label
+              class="col-sm-2 col-form-label"
+              for="basic-default-company"
+              >Code</label
+            >
+            <div class="col-sm-10">
+              <input  [(ngModel)]="offre.code"
+                name="code"
+                ngModel
+                type="text"
+                class="form-control"
+                id="basic-default-company"
+                placeholder="Code"
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label
+              class="col-sm-2 col-form-label"
+              for="basic-default-email"
+              >Date Création</label
+            >
+            <div class="col-sm-10">
+              <div class="input-group input-group-merge">
+                <input  [(ngModel)]="offre.dateCreation"
+                  name="dateCreation"
+                  ngModel
+                  type="date"
+                  id="basic-default-email"
                   class="form-control"
-                  id="basic-default-name"
-                  placeholder="Libelle"
+                  placeholder="Date Création"
                 />
               </div>
             </div>
-            <div class="row mb-3">
-              <label
-                class="col-sm-2 col-form-label"
-                for="basic-default-company"
-                >Code</label
-              >
-              <div class="col-sm-10">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="basic-default-company"
-                  placeholder="Code"
-                />
-              </div>
+          </div>
+          <div class="row mb-3">
+            <label
+              class="col-sm-2 col-form-label"
+              for="basic-default-phone"
+            >
+              Prix</label
+            >
+            <div class="col-sm-10">
+              <input [(ngModel)]="offre.prix"
+                type="text"
+                name="prix"
+                ngModel
+                id="basic-default-phone"
+                class="form-control phone-mask"
+                placeholder="Prix"
+              />
             </div>
-            <div class="row mb-3">
-              <label
-                class="col-sm-2 col-form-label"
-                for="basic-default-email"
-                >Date Création</label
-              >
-              <div class="col-sm-10">
-                <div class="input-group input-group-merge">
-                  <input
-                    type="text"
-                    id="basic-default-email"
-                    class="form-control"
-                    placeholder="Date Création"
-                  />
-                </div>
-               
-              </div>
-            </div>
-            <div class="row mb-3">
-              <label
-                class="col-sm-2 col-form-label"
-                for="basic-default-phone"
-              >
-                Prix</label
-              >
-              <div class="col-sm-10">
-                <input
-                  type="text"
-                  id="basic-default-phone"
-                  class="form-control phone-mask"
-                  placeholder="Prix"
-                />
-              </div>
-            </div>
+          </div>
 
-            <div class="row justify-content-end">
-              <div class="col-sm-10">
-                <button type="submit" class="btn btn-primary">
-                  Save
-                </button>
-              </div>
+          <div class="row justify-content-end">
+            <div class="col-sm-10">
+              <button
+                type="submit"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                Save
+              </button>
             </div>
-          </form>
+          </div>
+        </form>
       </div>
     </div>
   </div>

@@ -5,7 +5,7 @@ import { OffreComponent } from './offre/offre.component';
 
 const routes: Routes = [
   { path: 'offre', component: OffreComponent },
-  { path: 'offreEdit', component: OffreEditComponent }
+  { path: 'offreEdit/:id', component: OffreEditComponent },
 ];
 
 @NgModule({
