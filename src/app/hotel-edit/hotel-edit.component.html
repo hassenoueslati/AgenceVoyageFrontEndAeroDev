@@ -1,0 +1,76 @@
+<div class="col-xxl">
+  <div class="card mb-4">
+    <div class="card-header d-flex align-items-center justify-content-between">
+      <h5 class="mb-0">Edit Hotel</h5>
+    </div>
+    <div class="card-body">
+      <form  #f="ngForm"  (ngSubmit)="updateOffre(f)">
+        <div class="row mb-3">
+          <label class="col-sm-2 col-form-label" for="code">code</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="hotel.code" name="code" id="code" placeholder="John Doe" />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-2 col-form-label" for="libelle">libelle</label>
+          <div class="col-sm-10">
+            <div class="input-group input-group-merge">
+              <input
+                type="text"
+                id="libelle"
+                name="libelle"
+                class="form-control"
+                placeholder="john.doe"
+                [(ngModel)]="hotel.libelle"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-2 col-form-label" for="Adresse">Adresse</label>
+          <div class="col-sm-10">
+            <input
+              type="text"
+              class="form-control"
+              id="Adresse"
+              name="adresse"
+              placeholder="ACME Inc."
+              [(ngModel)]="hotel.adresse"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-2 col-form-label" for="libelle">Categorie</label>
+          <div class="col-sm-10">
+            <div class="card-select">
+              <select class="form-select col-5 " aria-label="Default select example" (change)="changeCategorie($event)"  >
+                <option selected hidden> sélectionner une categorie ...</option>
+                <option  value="TroisEtoiles"><h1>3 étoiles</h1></option>
+                <option  value="quatreEtoiles"><h1>4 étoiles</h1></option>
+                <option  value="cinqEtoiles"><h1>5 étoile</h1></option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-2 col-form-label" for="NombreChambres">Nombre des Chambres</label>
+          <div class="col-sm-10">
+            <input
+              type="number"
+              id="NombreChambres"
+              name="nombreChambres"
+              class="form-control "
+              placeholder="NombreChambres"
+              [(ngModel)]="hotel.nombreChambres"
+            />
+          </div>
+        </div>
+        <div class="row justify-content-end">
+          <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">Send</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

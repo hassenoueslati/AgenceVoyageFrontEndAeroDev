@@ -7,10 +7,15 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
-import { OffreComponent } from './offre/offre.component';
-import { OffreEditComponent } from './offre-edit/offre-edit.component';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { HotelComponent } from './hotel/hotel.component';
+import { HotelEditComponent } from './hotel-edit/hotel-edit.component';
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { HotelAddComponent } from './hotel-add/hotel-add.component';
+import { AireportComponent } from './aireport/aireport.component';
+import { AireportAddComponent } from './aireport-add/aireport-add.component';
+import { AireportEditComponent } from './aireport-edit/aireport-edit.component';
 
 @NgModule({
   declarations: [
@@ -19,11 +24,30 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     FooterComponent,
     LoginComponent,
+    HotelComponent,
+    HotelEditComponent,
+    HotelAddComponent,
+    AireportComponent,
+    AireportAddComponent,
+    AireportEditComponent,
+    PartenaireAddComponent,
+    PartenaireComponent,
+    PartenaireEditComponent,
+    VoitureeComponent,
+    VoitureeEditComponent,
+    VoitureeAddComponent,
     OffreComponent,
     OffreEditComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+  ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
