@@ -1,40 +1,39 @@
 
 <div class="card">
-  <h5 class="card-header">Hotel</h5>
+  <h5 class="card-header">Partenaire</h5>
   <div class="table-responsive text-nowrap">
-    <button type="button" style="margin-left: 10px" class="btn btn-primary"  routerLink="/hotelAdd">
-      Ajouter Hotel
+    <!-- Button trigger modal -->
+    <button type="button" style="margin-left: 10px" class="btn btn-primary" routerLink="/partenaireAdd">
+      Ajouter Partenaire
     </button>
     <table class="table table-striped mt-3">
       <thead>
       <tr>
-        <th>libelle</th>
-        <th>code</th>
-        <th>Adresse</th>
-        <th>Categorie</th>
-        <th>NombreChambres</th>
+        <th>specialite</th>
+        <th>nom</th>
+        <th>domaine</th>
+        <th>nationalite</th>
         <th>Actions</th>
       </tr>
       </thead>
-      <tbody class="table-border-bottom-0" *ngFor="let hotel of ListHotel">
+      <tbody class="table-border-bottom-0" *ngFor="let partenaire of ListPartenaire">
       <tr>
         <td>
-          <i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong> {{hotel.libelle}}</strong>
+          <i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong> {{partenaire.specialite}}</strong>
         </td>
-        <td>{{hotel.code}}</td>
-        <td>{{hotel.adresse}}</td>
-        <td>{{hotel.categorie}}</td>
-        <td>{{hotel.nombreChambres}}</td>
+        <td>{{partenaire.nom}}</td>
+        <td>{{partenaire.domaine}}</td>
+        <td>{{partenaire.nationalite}}</td>
         <td>
           <div class="dropdown">
             <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
               <i class="bx bx-dots-vertical-rounded"></i>
             </button>
             <div class="dropdown-menu">
-              <a class="dropdown-item" (click)="updateHotel(hotel)"
+              <a class="dropdown-item" href="javascript:void(0);"
               ><i class="bx bx-edit-alt me-1"></i> Edit</a
               >
-              <a class="dropdown-item" (click)="deleteHotel(hotel.idHotel)"
+              <a class="dropdown-item" href="javascript:void(0);"
               ><i class="bx bx-trash me-1"></i> Delete</a
               >
             </div>
@@ -45,3 +44,8 @@
     </table>
   </div>
 </div>
+
+
+
+
+

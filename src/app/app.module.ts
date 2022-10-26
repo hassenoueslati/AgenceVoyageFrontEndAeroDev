@@ -13,11 +13,9 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { HotelAddComponent } from './hotel-add/hotel-add.component';
-import { VoitureeAddComponent } from './voituree-add/voituree-add.component';
-import { VoitureeEditComponent } from './voituree-edit/voituree-edit.component';
-import { VoitureeComponent } from './voiture/voituree.component';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-
+import { AireportComponent } from './aireport/aireport.component';
+import { AireportAddComponent } from './aireport-add/aireport-add.component';
+import { AireportEditComponent } from './aireport-edit/aireport-edit.component';
 
 @NgModule({
   declarations: [
@@ -29,12 +27,18 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
     HotelComponent,
     HotelEditComponent,
     HotelAddComponent,
+    AireportComponent,
+    AireportAddComponent,
+    AireportEditComponent,
+    PartenaireAddComponent,
+    PartenaireComponent,
+    PartenaireEditComponent,
     VoitureeComponent,
     VoitureeEditComponent,
-    VoitureeAddComponent
+    VoitureeAddComponent,
+    OffreComponent,
+    OffreEditComponent,
   ],
-
-  
   imports: [
     BrowserModule,
     AppRoutingModule,
