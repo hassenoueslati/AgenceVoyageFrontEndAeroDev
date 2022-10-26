@@ -1,0 +1,64 @@
+<div class="col-xxl">
+  <div class="card mb-4">
+    <div class="card-header d-flex align-items-center justify-content-between">
+      <h5 class="mb-0">Edit Partenaire</h5>
+    </div>
+    <div class="card-body">
+      <form  #f="ngForm"  (ngSubmit)="updateOffre(f)">
+        <div class="row mb-3">
+          <label class="col-sm-2 col-form-label" for="nom">nom</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="partenaire.nom" name="nom" id="nom" placeholder="John Doe" />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-2 col-form-label" for="specialite">specialite</label>
+          <div class="col-sm-10">
+            <div class="input-group input-group-merge">
+              <input
+                type="text"
+                id="specialite"
+                name="specialite"
+                class="form-control"
+                placeholder="john.doe"
+                [(ngModel)]="partenaire.specialite"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-2 col-form-label" for="Domaine">Domaine</label>
+          <div class="col-sm-10">
+            <input
+              type="text"
+              class="form-control"
+              id="Domaine"
+              name="domaine"
+              placeholder="ACME Inc."
+              [(ngModel)]="partenaire.domaine"
+            />
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="col-sm-2 col-form-label" for="nationalite">Nombre des Chambres</label>
+          <div class="col-sm-10">
+            <input
+              type="number"
+              id="nationalite"
+              name="nationalite"
+              class="form-control "
+              placeholder="nationalite"
+              [(ngModel)]="partenaire.nationalite"
+            />
+          </div>
+        </div>
+        <div class="row justify-content-end">
+          <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">Send</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
